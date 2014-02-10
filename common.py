@@ -17,14 +17,6 @@ def fail_with(s):
     print "[FAILURE] %s" % s
     sys.exit(1)
 
-def write_lines(lines, filename):
-    """
-    writes lines to the file
-    """
-    with open(filename, "wb") as f:
-        for l in lines:
-            f.write(l)
-
 def launch_command(command, timeout, logfile):
     """
     Execs `command` in a subprocess, and returns the

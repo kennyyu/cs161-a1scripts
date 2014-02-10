@@ -103,10 +103,8 @@ command = "sys161 kernel 'sp2; q'"
 
 for i in range(iterations):
     logfile = "%s.%d" % (logfile_base,i)
-
     print "Running iteration %d, logfile: %s ..." % (i, logfile)
     lines = launch_command(command, timeout, logfile)
-    write_lines(lines, logfile)
     lines = get_output_lines(lines)
     records = gen_records(lines, SP2_NUM_MAPPINGS)
     check_deleted_nums(records, SP2_NUM_MAPPINGS)

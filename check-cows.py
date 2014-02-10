@@ -143,10 +143,8 @@ command = "sys161 kernel 'sp1 %d; q'" % num_babies
 
 for i in range(iterations):
     logfile = "%s.%d" % (logfile_base,i)
-
     print "Running iteration %d, logfile: %s ..." % (i, logfile)
     lines = launch_command(command, timeout, logfile)
-    write_lines(lines, logfile)
     lines = get_output_lines(lines)
     parent, babies = gen_parent_babies_table(lines, num_babies)
     check_baby_lyrics(babies)
