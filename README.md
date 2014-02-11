@@ -1,11 +1,17 @@
 Grading scripts for cows and hunger games
 =========================================
 
+## Note
+
+Passing these grading scripts does NOT mean your code is correct.
+This is only to help you test your synch problems.
+
 ## Setup
 
-Copy all the python files into the `cs161/root` directory:
+Clone this repo copy all the python files into the `~/cs161/root` directory:
 
-    cp *.py path/to/cs161/root/
+    git clone https://github.com/kennyyu/cs161-a1scripts.git ~/cs161-a1scripts
+    cp ~/cs161-a1scripts/*.py ~/cs161/root/
 
 ## Running the scripts
 
