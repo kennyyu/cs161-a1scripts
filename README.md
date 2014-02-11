@@ -1,4 +1,4 @@
-Grading scripts for cows and hunger games
+Testing scripts for cows and hunger games
 =========================================
 
 ## Note
@@ -15,7 +15,7 @@ Clone this repo copy all the python files into the `~/cs161/root` directory:
 
 ## Running the scripts
 
-In the `cs161/root` directory:
+In the `~/cs161/root` directory:
 
     python check-cows.py
     python check-games.py
