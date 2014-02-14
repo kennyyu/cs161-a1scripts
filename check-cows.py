@@ -53,7 +53,7 @@ def gen_parent_babies_table(lines, num_babies):
                 baby_num = int(prefix_words[1])
             except ValueError as e:
                 fail_with("error when parsing baby num, line: %s, error: %s", l, str(e))
-            if baby_num < 0 or baby_num > num_babies:
+            if baby_num < 0 or baby_num >= num_babies:
                 fail_with("baby num out of range: %s", l)
             lyric = suffix.strip()
             babies[baby_num].append((lnum, lyric))
@@ -71,7 +71,9 @@ def gen_parent_babies_table(lines, num_babies):
             try:
                 baby_num = int(suffix_words[-1])
             except ValueError as e:
-                fail_with("error when parsing baby num, line: %s, error: %s", l, str(e))
+                fail_with("error when parsing baby num, line: %s, error: %s" % (l, str(e)))
+            if baby_num < 0 or baby_num >= num_babies:
+                fail_with("baby num out of range: %s", l)
             parent[baby_num].append(lnum)
 
         # If anything else, fail
